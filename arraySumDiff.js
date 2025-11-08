@@ -26,3 +26,7 @@ function sumOfDifferences(arr) {
 //     return sum + (current - arr[index + 1]);
 //   }, 0);
 // }
+
+// function sumOfDifferences(arr) {
+//     return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
+// }
