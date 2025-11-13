@@ -30,3 +30,18 @@ function sumOfDifferences(arr) {
 // function sumOfDifferences(arr) {
 //     return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
 // }
+
+function sumOfDifferences(arr) {
+  if (arr.length < 2) return 0;
+
+  let sorted = arr.sort((a, b) => b - a);
+  let sum = 0;
+
+  for (let i = 0; i < sorted.length - 1; i++) {
+    sum += (sorted[i] - sorted[i + 1]);
+  }
+
+  return sum;
+}
+
+console.log(sumOfDifferences([10, 2, 1])); // 9
